@@ -1,17 +1,22 @@
-# import os
-# os.chdir('/home/vnanumyan/SG/scripts/gHypE/tests')
 from __future__ import division
-from context import ghypeon
+import sys
+print(sys.executable)
+import os
 
+from context import ghypeon
 import ghypeon as gh
 import ghypeon.biasedurn as bu
 import numpy as np
+
+os.chdir('/home/vnanumyan/SG/scripts/ghypeon/tests')
+
 
 
 def test_urn(self):
     adj = np.array([0, 3, 1])
     possib = np.array([5, 3, 4])
     return bu.dMWNCHypergeo(adj, possib)
+
 
 gh.Ensemble.test_urn = test_urn
 
@@ -28,7 +33,7 @@ print("ensemble\t %s" % ens)
 print("# nodes\t\t %s" % ens.nodes)
 print("# interactions\t %s" % ens.num_inter)
 print("omega\n%s" % ens.get_propensity_matrix())
-print("test BUrn\t %s" %ens.test_urn())
+print("test BUrn\t %s" % ens.test_urn())
 print("")
 
 ens.check_consistency()
@@ -56,7 +61,7 @@ print("=====================")
 print("A TEST ADJACENCY:\n%s" % adj)
 print("")
 
-print("configuration possibity matrix:\n%s" % \
+print("configuration possibity matrix:\n%s" %
       ens.configuration_possibility(adj.sum(1), adj.sum(0)))
 print('')
 
