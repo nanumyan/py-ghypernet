@@ -39,7 +39,7 @@ def dMWNCHypergeo(adj, possib, omega=None):
     """
 
     assert type(adj) is ndarray, "`adj` must be a numpy.array"
-    assert type(possib) is ndarray, "`xi` must be a numpy.array"
+    assert type(possib) is ndarray, "`possib` must be a numpy.array"
     assert adj.shape == possib.shape, "shapes of `adj` and `xi` don't match"
     if omega:
         assert type(omega) is ndarray, "`omega` must be a numpy.array"

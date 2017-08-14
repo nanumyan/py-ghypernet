@@ -246,7 +246,7 @@ class Ensemble(object):
             kout (ndarray):
                 1D array of node (out-)degrees.
                 If `self.directed=False`, this is the total degree.
-            kout (ndarray, optional):
+            kin (ndarray, optional):
                 1D array of node in-degrees.
                 Necessary, if `self.directed=True`.
             inplace (bool):
